@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.test.sampleapp.presentation.tindercards.TinderCardViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/card_stack_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttonLayout"
+            android:clipToPadding="false"
+            android:padding="4dp"></com.yuyakaido.android.cardstackview.CardStackView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/refreshBtn"
+            android:layout_width="60dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:layout_height="60dp"
+            android:background="@drawable/rewind_blue_24dp" />
+
+        <TextView
+            android:id="@+id/noDataFoundText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:text="No Data Found"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/buttonLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/declineBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/skip_red_24dp" />
+
+            <Button
+                android:id="@+id/acceptBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:background="@drawable/like_green_24dp" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
